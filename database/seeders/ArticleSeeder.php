@@ -14,10 +14,11 @@ class ArticleSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('articles')->insert([
-            'title' => 'Belajar Model Dengan Laravel',            
-            'content' => 'Dummy data dibuat diisi oleh Seeder',
-            'image' =>'https://via.placeholder.com/640x480.png/00ff77?text=BelajarModel',                        
-        ]);
+        // DB::table('articles')->insert([
+        //     'title' => 'Belajar Model Dengan Laravel',            
+        //     'content' => 'Dummy data dibuat diisi oleh Seeder',
+        //     'image' =>'https://via.placeholder.com/640x480.png/00ff77?text=BelajarModel',                        
+        // ]);
+        \App\Models\Article::factory()->count(10)->create();
     }
 }
