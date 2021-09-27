@@ -13,5 +13,5 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/Home', [HomeController::class,'getAll']);
-Route::get('/Article/{id}', [HomeController::class,'getById']);
+Route::get('/home', [HomeController::class,'getAll']);
+Route::get('/article/{id}', [HomeController::class,'getById']);

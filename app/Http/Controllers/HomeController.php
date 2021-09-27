@@ -4,16 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Article;
+use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
     public function getAll(){
-        $post = Article::all();
-        return view('Home',['post'=>$post]);
+        $ar = Article::all();
+        return view('Home',['ar'=>$ar]);
+        // $ar = DB::table('articles')->get();
+        // return view('Home',['ar'=>$ar]);
     }
 
     public function getById($id){
-        $post = Article::find($id);
-        return view('Article',['post'=>$post]);
+        $ar = Article::find($id);
+        return view('Article',['ar'=>$ar]);
     }
 
 }
